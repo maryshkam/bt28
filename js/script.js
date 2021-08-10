@@ -1,11 +1,15 @@
 // "use strict";
 // console.log(flat);
-let flat;
-console.log(street);
-var street;
-console.log(street);
-street = "fhjshf";
-console.log(street);
+// let flat;
+
+let male;
+console.log(male);
+// var street;
+// console.log(street);
+// var street = "Lesi Ukrainky";
+// console.log(street);
+// street = "fhjshf";
+// console.log(street);
 // let user = "";
 // let User = "";
 // let _user = "";

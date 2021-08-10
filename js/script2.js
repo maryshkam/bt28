@@ -33,12 +33,18 @@
 // console.log(typeof quantity);
 
 // Шаблонные строки
-// // Написать фразу с помощью шаблонных строк Здравствуйте, меня зовут А, мне Б лет и мне нравится Ц, где А, Б, Ц - переменные вставленные в строку.
+// Написать фразу с помощью шаблонных строк 
+// Здравствуйте, меня зовут А, мне Б лет и мне нравится Ц, где А, Б, Ц - переменные вставленные в строку.
 
 
 // const name = 'Манго';
 // const age = 5;
 // const hobby = 'плавать';
+
+// console.log(`Здравствуйте, меня зовут ${name}, мне ${age} лет и мне нравится ${hobby}`);
+
+
+
 // const message = `Здравствуйте, меня зовут ${name} мне ${age} лет и мне нравиться ${hobby}`;
 
 // console.log(message);
@@ -51,12 +57,13 @@
 // 3) Спросить телефон (prompt)
 // 4) Составить финальную фразу (template string)
 
-// const userName = prompt('Enter your name');
-// const email = prompt('Enter your email');
-// const phoneNumber = prompt('Enter phon number');
+// const name = prompt("Ваше имя ...");
+// const email = prompt("Ваш email ...");
+// const phone = prompt("Ваш Phone number ...");
 
-// const message = `Пользоваель под именем ${userName} использует ${email} почту и ${phoneNumber} телелефон`;
+// const message = `Пользоваель под именем ${name} использует ${email} почту и ${phone} телефон`;
 // console.log(message);
+
 
 
 // let userName, email, phone;
@@ -106,7 +113,8 @@
 // let b = false;
 // let c = "12";
 // let d = 1;
-// let result = a + d + c + b;
+// let result = a + b + d * c
+// // let result = a + d + c + b;
 // console.log(result);
 // console.log(typeof result);
 
@@ -116,7 +124,9 @@
 
 // const rad = 10;
 // const PI = Math.PI;
+// // console.log(PI);
 // const powRad = Math.pow(rad, 2);
+// // console.log(powRad);
 // const result = PI * powRad;
 // console.log('result', result)
 
@@ -131,29 +141,29 @@
 //Операторы сравнения и приведение типов
 // // Каким будет результат этих выражений?
 
-// console.log(5 > 4);
-// console.log(10 >= "7"); 
-// console.log("2" > "12");
-// console.log("2" < "12");
-// console.log("4" == 4);
-// console.log("6" === 6);
-// console.log("false" === false);
-// console.log(1 == true);
-// console.log(1 === true);
-// console.log("0" == false);
-// console.log("0" === false);
-// console.log("Ёнанас" < "ёжик");
+console.log(5 > 4);
+console.log(10 >= "7"); 
+console.log("210" > "3");
+console.log("2" < "12");
+console.log("4" == 4);
+console.log("6" === 6);
+console.log("false" === false);
+console.log(1 == true);
+console.log(1 === true);
+console.log("0" == false);
+console.log("0" === false);
+console.log("З" > "Z");
 // console.log("Ёнанас" === "ёжик");
-// console.log(undefined == null);
-// console.log(undefined === null);
+console.log(undefined == null);
+console.log(undefined === null);
 
 // Посчитать суму товаров в козине магазина
 // Нужно ввести цену 3-х товаров и посчитать их суму
 
-// const phonePrice = Number(prompt('Enter phone price')); // 10
-// const tvPrice = +prompt('Enter tv price'); // 12
-// const playStationPrice = Number(prompt('Enter ps price')) // 8
+const phonePrice = Number(prompt('Enter phone price')); // 10
+const tvPrice = +prompt('Enter tv price'); // 12
+const playStationPrice = Number(prompt('Enter ps price')) // 8
 
-// const result = phonePrice + tvPrice + playStationPrice;
+const result = phonePrice + tvPrice + playStationPrice;
 
-// console.log(result); // 30
+console.log(result); // 30

@@ -1,2 +1,2 @@
-"use strict";
-let name = 6;
+// "use strict";
+// let name = 6;
