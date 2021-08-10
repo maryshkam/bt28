@@ -1,7 +1,11 @@
-// console.log(street);
-// street;
-
-// street = "fhjshf";
+// "use strict";
+// console.log(flat);
+let flat;
+console.log(street);
+var street;
+console.log(street);
+street = "fhjshf";
+console.log(street);
 // let user = "";
 // let User = "";
 // let _user = "";
@@ -66,13 +70,13 @@ const isActive = true;
 let num3 = 6;
 // num3 = num3 + 3;
 // num3 += 3;
-
+// console.log(newUser);
 // num3++;
 console.log(5 >= 5);
 console.log(3 < 2);
 console.log(2 === "2");
 console.log(2 !== 4);
-
+let newUser = 4;
 console.log(!false);
 // num3--;
 // console.log(num3);
