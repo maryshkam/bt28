@@ -1,414 +1,279 @@
-// // console.log(0.1 + 0.2 === 0.3);
-// // console.log(0.1 + 0.2);
-let result = 0.1 + 0.2;
+// const array = ["string", 4, true, [], {}, null, undefined];
 
-function sum() {
-  // console.log(result);
-  let result = null;
-  // console.log(result);
-  result = 2 + 3;
-  console.log(result);
-  return result;
-}
-console.log(sum());
+// const clients = ["Mango", "Poly", "Ajax"];
+// console.log(clients[0]);
+// console.log(clients);
+// clients[1] = "Bob";
+// console.log(clients);
+// // Значение элемента можно заменить
+// // clients[0] = "Kiwi";
+// // console.log(clients[0]); // Kiwi
+// clients[3] = "Sake";
+// console.log(clients[5]);
+// // Или добавить
+// clients[5] = "Alex";
+// console.log(clients);
+// // console.log(clients[3]);
+// // console.log(clients[4]);
+// // console.log(clients[5]);
+// // clients[100] = "Bob";
+// console.log(clients[clients.length - 1]);
+// // console.log(clients); // ["Kiwi", "Poly", "Ajax", "Alex"]
 
-console.log(result);
-// // console.log(result)
-// // console.log(Math.floor(result))
-// // console.log(Math.ceil(result))
-// // console.log(Math.round(result))
-// // console.log(result.toFixed(2))
+// // 2) Почему не работает консоль лог(words)  внутри функции ?
+// let title = "Arrays for begginers";
+// console.log(title);
 
-// let name = "The quick brown fox jumps over the lazy dog.";
-// let slicedName = name.slice(2, 15);
-// console.log("name", name);
-// console.log("slicedName", slicedName);
+// const str = title.split(" ");
+// console.log(str);
+// console.log(str.join(' '));
 
-// // const myNewResult = result;
-
-// // console.log("myNewResult", myNewResult)
-
-// console.log(0 || "" || null); // null
-
-// console.log(0 || "Манго"); // Манго
-
-// console.log(0 || "false" || "string");
-
-// // || - перше true
-// // && - перше false
-
-// console.log(("Mango" && null) || 6 || "");
-// // 1) Mango && null // null
-// // 2) null ||  // false
-
-// let someUserValue = 120;
-// if (someUserValue < 50) {
-//   console.log(`some result ${someUserValue}`);
-// } else if (someUserValue < 100) {
-//   console.log(`some result ${someUserValue}`);
-// } else {
-//   console.log("we don't have any result");
+// function slugify(title) {
+//   // Change code below this line
+//   let normalizedTitle = title.toLowerCase();
+//   const words = normalizedTitle.split(" ");
+//   console.log(words);
 // }
 
-// if(!someUserValue) {
-//   console.log("some result false");
+// slugify(title);
+// slugify("Hello bootc");
+
+// // 3) Можно ли в значения массива вставлять переменные ?
+// const newClients = ["Monkong", "aaaaa", "Misha", "Singu"];
+// const userName = "Bob";
+// // const oldClients = ["Mango", "Ajax", "Poly", "Kiwi", newClients];
+// // console.log(oldClients);
+// // console.log(oldClients[4][0][2]);
+// // const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"].concat(newClients);
+// const oldClients = [newClients[2], "Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(oldClients);
+// // const number = ["Bob"];
+// // const number2 = [2];
+// // console.log(number + number2);
+
+// // 4) const для масивов
+// // const clients = ["Mango", "Poly", "Ajax"];
+// // clients = 5;
+// // console.log(clients);
+
+// // const arr = [2, 'a', true, null];
+
+// // const aar = [3, 'w']
+// // const a = [true, null]
+
+// // console.log([1, 3, 5] === [1, 3, 5]);
+
+// let a = 5;
+// // a = 9;
+// let b = 5;
+// let c = a;//5
+// console.log(a);
+// console.log(c);
+// // a = 7;
+// console.log(a);
+// console.log(c);
+// console.log(a === c);
+
+// const a1 = [1,2,3];
+// console.log(a1);
+// const a2 = [2,3,4];
+// const b1 = a1// a1
+// console.log(b1);
+// a1[3]= 4;
+// console.log(a1);
+// console.log(b1);
+// // console.log(a1 === a1);
+// const newArr = [];
+// newArr[0] = "string"
+// console.log(newArr);
+// const arr1 = [1, 2, 3, 77, -1]; // link1
+// console.log(arr1.indexOf(-1));
+// arr1[3]=88;
+// console.log(arr1);
+// // const arr2 = [1, 2, 3]; // link2
+
+// const clientsB = ["Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(clientsB.indexOf("Poly")); // 2
+// console.log(clientsB.indexOf("Monkong")); // -1
+
+// const arrResult = [];
+// const secondArr = [1.2,"st"];
+// secondArr[0] = "valid string";
+// console.log(secondArr);
+// showArray(arrResult);
+// console.log(arrResult);
+// arrResult.push("djksfj");
+// const thirdArr = [...secondArr, ...arrResult];
+// console.log(secondArr);
+// console.log(arrResult);
+// arrResult.push("111");
+// arrResult.push("2222");
+// arrResult.push("3");
+// console.log(arrResult);
+
+// function showArray(arr){
+//   console.log(arr);
 // }
+// showArray(arrResult);
 
-let res = 5;
+// arrResult.push([2,4]);
+// arrResult.push({"2222":"test"});
+// arrResult.push("3");
+// showArray(arrResult);
+// // console.log(arr1 === arr2);
+// console.log(secondArr);
+// const numbers = [7, 3, 8, 9, 2]; // link1
+// // const newNumbers = numbers.slice(3);
+// const newNumbers = numbers.slice(); // link2
+// console.log("numbers", numbers);
+// console.log(`newNumbers`, newNumbers);
+// numbers.push(4, 5, 6);
+// console.log(numbers);
 
-res > 10 ? console.log(true) : console.log(false);
+// 1) базовые операции с массивом
+// Создайте массив styles с элементами «Джаз» и «Блюз».
+// Добавьте «Рок-н-ролл» в конец.
+// Замените значение в середине на «Классика».
+// Удалите первый элемент и выведите его в консоль.
+// Вставьте «Рэп» и «Регги» в начало массива.
 
-if (res) {
-  console.log("Hello");
-} else {
-  console.log("World");
-}
+// Массив по ходу выполнения операций:
+// Джаз, Блюз
+// Джаз, Блюз, Рок-н-ролл
+// Джаз, Классика, Рок-н-ролл
+// Классика, Рок-н-ролл
+// Рэп, Регги, Классика, Рок-н-ролл
 
-// Логічні оператори
-// // Що виведе код?
+const styles = ["Джаз", "Блюз"];
+styles.push("Рок-н-ролл");
+styles[1]= "Классика";
+// styles.splice(1, 1, "Классика");
+console.log(styles);
+const deleteStyle = styles.splice(0,1);
+console.log(deleteStyle);
+console.log(styles);
+// styles.unshift("Регги");
+// styles.unshift("Рэп");
 
-console.log(true && 3);
+styles.splice(0,0,"Рэп", "Регги",)
+console.log(styles);
+// const styles = ["Джаз", "Блюз"];
+// styles.push("Рок-н-ролл");
+// styles.splice(1, 1, "Классика");
+// const deletedStyle = styles.shift();
+// styles.unshift("Рэп", "Регги");
+// console.log(deletedStyle);
+// console.log(styles);
 
-console.log(false && 3);
+const roles = ["user", "tester", "admin"];
+console.log(roles[1]);
+console.log(roles[0]);
+console.log(roles[5]);
+console.log(roles.length);
+console.log(roles[-1]);
+const lastIndex = roles.length - 1;
+console.log(roles[lastIndex]);
+roles.pop();
+console.log(roles);
+const result = roles.push("support");
+console.log(roles);
+roles.shift();
+console.log(roles);
+roles.unshift("manager");
+console.log(roles);
+roles.splice(2, 3);
+console.log(roles);
+roles.splice(2, 1, "user2");
+console.log(roles);
+const value = "Tester";
+// roles.splice(2, 0, "user2");
+// console.log(roles);
+const newArr = roles.slice();
+console.log("newArr", newArr);
+console.log(typeof roles);
+console.log(roles.includes(value.toLowerCase()));
 
-console.log(true && 4 && "hello");
+// 2) Напиши функцию logItems(array), которая получает массив и использует цикл for, который для каждого элемента массива
+//будет выводить в консоль сообщение в формате < номер элемента > - <значение элемента >.
+//Нумерация элементов должна начинаться с 1.
+// Например для первого элемента массива['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено
+// 1 - Mango, а для индекса 2 выведет 3 - Ajax.
 
-console.log(true && 0 && "hello");
+const users = ["Mango", "Poly", "Ajax"]; // 3
 
-console.log(true || 3);
-
-console.log(true || 3 || 4);
-
-console.log(true || false || 7);
-
-console.log(null || 2 || undefined);
-
-console.log(null || (2 && 3) || 4);
-// null  || 3 || 4
-// if...else и prompt
-// // Используя конструкцию if..else, напишите код, который будет спрашивать: «Какое количество месяцев в году». Если пользователь вводит 12 ,
-// то показать: «Верно!», в противном случае – отобразить: «Не знаете ? 12!»
-
-// 1) Попросить у юзера число
-// 2) Проверить равно ли оно 12
-// 3) На основе проверки запустить if или else
-
-// const userNumber = Number(prompt("ВВедіть кількість місяців в році..."));
-// if(userNumber === 12) {
-//   console.log("Вірно! userNumber");
-// } else {
-//   console.log(`Іди вчитись в GoIT тому що введено число ${userNumber} `);
-// }
-
-// const userNumber = Number(prompt('Enter number'));
-
-// if (userNumber === 12) {
-//     console.log('Correct')
-// } else {
-//     console.log('Error')
-// }
-
-// // Написать программу которая получит от пользователя число и определит четное это число или не четное.
-
-// 1) Получить число
-// 2) Написать проверку на чет нечет
-// 3) Вивести результат
-
-// const num = Number(prompt("Введіть число"));
-// if (num % 2 === 0) {
-//   console.log(`${num}-число парне`);
-// } else {
-//   console.log(`${num}-число непарне`);
-// }
-
-// const day = prompt("Enter day");
-
-// if (day % 2 === 0) {
-//     console.log('Четное')
-// } else {
-//     console.log("Нечет")
-// }
-
-// Написать программу где мы спрашиваем у пользователя номер месяца  и показываем к какому времени года он принадлежит
-// Если пользователь вводит 2 - показываем слово Зима
-
-// 1) Получить данные от юзера
-// 2) Проверка на время года
-// 3) Вывести результат
-
-// const monthNumber = prompt("enter month number");
-// switch (monthNumber) {
-//   case "1":
-//   case "2":
-//   case "12":
-//     console.log("Зима");
-//     break;
-
-//   case "3":
-//   case "4":
-//   case "5":
-//     console.log("Весна");
-//     break;
-
-//   case "6":
-//   case "7":
-//   case "8":
-//     console.log("Літо");
-//     break;
-//   case "9":
-//   case "10":
-//   case "11":
-//     console.log("Осінь");
-//     break;
-
-//   default:
-//     console.log("Invalid type");
-// }
-// if (monthNumber === 1) {
-//     console.log('Зима')
-// } else if (monthNumber === 2) {
-//     console.log('Зима')
-// } else if (monthNumber === 12) {
-//     console.log('Зима')
-// }
-
-// if (monthNumber === 12 || monthNumber === 1 || monthNumber === 2) {
-//     console.log("Зима")
-// } else if (monthNumber >= 3 && monthNumber <= 5) {
-//     console.log('Весна');
-// } else if (monthNumber >= 6 && monthNumber <= 8) {
-//     console.log('Лето')
-// } else if (monthNumber >= 9 && monthNumber <= 11) {
-//     console.log('Осень')
-// } else {
-//     console.log('данные не валидны')
-// }
-
-// Написать программу которая проверяет логин и пароль пользователя и выводит приветствие - если все отлично и ошибку если неверный логин
-
-// const login = 'user@gmail.com';
-// const password = '12345'
-
-// const userLogin = prompt('Enter login')
-// const userPassword = prompt('Enter password')
-
-// if (login === userLogin && password === userPassword) {
-//     console.log('Wellcome')
-// } else {
-//     console.log('Error')
-// }
-
-// const result = login === userLogin && password === userPassword ? "Wellcome" : 'Error'
-
-// console.log('result', result)
-
-// написать програму которая спращивает у пользователя период подписки на сервис и показывает цену подписки
-// сначала if else потом switch
-// Если ввел День - цена 1.99
-// Если Неделя - цена 5.99
-// Если месяц - цена 10.99
-// Если год - цена 100.99
-
-// const period = prompt('Enter period')
-
-// if (period === 'День') {
-//     console.log('1.99')
-// } else if (period === 'Неделя') {
-//     console.log('5.99')
-// } else if (period === 'Месяц') {
-//     console.log('10.99')
-// } else if (period === 'Год') {
-//     console.log('100.99')
-// }
-
-// switch (period) {
-//     case "День":
-//         console.log('1.99')
-//         break;
-//         case 'Неделя':
-//         console.log('5.99')
-//         break;
-//         case 'Месяц':
-//         console.log('10.99')
-//         break
-//         case 'Год':
-//         console.log('100.99')
-//         break
-//     default:
-//         console.log('Error')
-//         break;
-// }
-
-// Тернарный оператор
-// // Перепишите if...else с использованием тернарного оператора.
-
-// const a = 1;
-// const b = 2;
-// let result;
-
-// if (a + b < 4) {
-//   result = 'Мало';
-// } else {
-//   result = 'Много';
-// }
-
-// авторизация на тернарник
-
-// Написать программу которая получит от пользователя число (количество минут) и выведёт на экран строку в формате часов и минут.
-
-// for
-// let i = 11;
-// if(i<=10){
-//   console.log("i", i);
-//   i++
-// }
-// if(i<=10){
-//   console.log("i", i);
-//   i++
-// }
-
-console.log("first time");
-
-for (let i = 0; i <= 10; i += 2) {
-  console.log("i", i);
+for (let i = 0; i < users.length; i++) {
+  console.log("index", i); // 0 // 1 // 2
+  console.log("value", users[i]); // users[0] // users[1] // users[2]
 }
 
-console.log("second time");
-
-// Напишите цикл for который выводит в консоль браузера числа по возрастанию от min до max.
-
-const max = 100;
-const min = 20;
-
-for (let i = min; i <= max; i += 10) {
-    console.log(i)
+for (const user of users) {
+  console.log("index", users.indexOf(user));
+  console.log(user); // Mango //Poly  // Ajax
 }
 
-// вывести только числа кратные 10
+// 3) Напиши код который ищет самое маленькое число в массиве.
 
-// for (let i = min; i <= max; i += 10) {
-//     console.log(i)
-// } // 10 итераций
+// const numbers = [2, 17, 94, 1, 23, 37];
 
-for (let i = 81; i <= 103; i += 1) {
-    if (i % 10 === 0) {
-        console.log(i) // 20  30
-    } else {
-      continue
-      console.log("num");
-    }
-    
-    
-}
+// 1) Определить стартовое минимальное число
+// 2) Сравнить это число со всеми последующими елементами масива
+// 3) Если стартовое число меньше числа с которым сравниваем - оставляем как есть
+// 4) Если стартовое число больше числа с которым срасниваем - пререзаписываем минимальное число
 
-// for (let i = min; i <= max; i += 1) {
-//     if (i % 10 !== 0) {
-//         continue
+// let smallestNumber = numbers[0]; // 2
 
-//     }
-//     console.log(i) // 20  30
+// for (let number of numbers) {
+//   // 2 // 17 // 94 // 1 // 23 // 37
+//   if (smallestNumber > number) {
+//     smallestNumber = number; // 1
+//   }
 // }
 
-for (let i = min; i <= max; i += 10) {
-    if (i === 50) {
-      
-        break
-        console.log("finish");
-    }
-    console.log(i)
-} // 10 итераций
+// console.log(smallestNumber); // 1
 
-// for (let i = min; i < 50; i += 10) {
+// const findSmallestNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
 
-//     console.log(i)
-// } // 10 итераций
-
-// for(let i = min; i <= max; i += 1) {
-//   console.log(i)
-// }
-
-// Напишите цикл for который выводит в консоль браузера числа по убыванию от max до min.
-
-// const max = 100;
-// const min = 20;
-
-// for(let i = max; i >= min; i -= 1) {
-//   console.log(i)
-// }
-
-// При помощи цикла for выведите чётные числа от 2 до 10.
-
-// Решение 1: больше кода и итераций
-// for(let i = 2; i <= 10; i += 1) {
-//     if(i % 2 === 0) {
-//       console.log(i);
+//   for (const number of numbers) {
+//     if (smallestNumber > number) {
+//       smallestNumber = number;
 //     }
 //   }
 
-//   // Решение 2: с continue и оператором %
-//   for(let i = 2; i <= 10; i += 1) {
-//     if(i % 2 !== 0) {
-//       continue;
-//     }
+//   return smallestNumber;
+// };
 
-//     console.log(i);
-//   }
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); // 1
+// console.log(findSmallestNumber([49, 4, 83, 7, 12])); // 4
 
-//   // Решение 3: меньше кода и итераций
-//   for(let i = 2; i <= 10; i += 2) {
-//     console.log(i);
-//   }
+// 4) Проверить является ли строка палиндромом
 
-//while do while
+// const str = "довод";
+// const newString = "Hello";
 
-// Напишите цикл, который предлагает ввести число большее 100 через prompt.
-// Если посетитель ввёл другое число - попросить ввести ещё раз, и так далее.
-// Цикл должен спрашивать число пока посетитель не введёт число, большее 100, либо не нажмёт кнопку Отмена в промпт.
+// 1) Сделать со строки масив
+// 2) Перевевнуть масив наоборот
+// 3) С масива сделать строку
+// 4) Сравнить 2 строки
 
-let number = 0;
+// const array = str.split("");
+// array.reverse();
+// const reverseString = array.join("");
+// console.log(reverseString);
 
-// while (number !== null && number <= 100) {
-//     number = prompt('Enter number');
-//     console.log("number", number)
-// }
+// const reverseStringWithChaining = newString.split("").reverse().join("");
 
-// do {
-//     number = prompt('Enter number');
-//     console.log("number", number);
-// } while (number !== null && number <= 100);
+// console.log(newString === reverseStringWithChaining);
 
-// while (number !== null && number <= 100) {
-//     number = prompt('Enter number');
-//     console.log('number',number)
-// }
+// const strSplit = str.split("").reverse().join("");
+// console.log(strSplit);
+// console.log(str === strSplit);
 
-// let number;
+// 5) Проверить если корзину пуста - показать фразу "Пустая корзина" иначе показать фразу "В корзине {х} товаров"
+// где х - это количество товаров в корзине
 
-// do {
-//     number = prompt('Enter number');
-//     console.log('number',number)
-// } while (number !== null && number <= 100);
+// const basket = [];
+// const basket = ["Хлеб", "Молоко", "Конфеты"];
 
-// infinite loop
-// Напиши скрипт который просит посетителя ввести число в prompt до тех пор, пока посетитель на нажмет Cancel,
-// и каждый раз добавляет введенное значение к общей сумме.
-
-// При загрузке страницы пользователю предлагается в prompt ввести число. Ввод добавляется к значению переменной total.
-// Операция ввода числа продолжается до тех пор, пока пользователь не нажмет кнопку Cancel в prompt.
-// После того как пользователь прекратил ввод нажав кнопку Cancel, показать alert со строкой 'Общая сумма чисел равна [сумма]'.
-
-// let number = 0;
-// let total = 0;
-
-// while (number !== null) {
-//     number = prompt('Enter number')
-//     total += Number(number);
-// }
-
-// console.log("total", total);
-
-// Написать програму которая конвертирует минуты в формат HH:MM
-
-// 70 покажет 01:10
-// 450 покажет 07:30
-// 1441 покажет 24:1
+// 6) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
+// пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран

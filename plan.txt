@@ -1,21 +1,9 @@
-
-
-Логические операторы
-
-if
-
-if else
-
-else if
-
-? :
-
-switch case
-
-while
-
-do while
-
-for
-
-continue and break
+Операции с масивами (замена, добавление)
+ Перебор масива for, for of
+ Передача по сылке и по значению
+ split join indexOf includes
+ push pop shift unshift
+ slice 
+ splice (delete, )
+ concat
+ ...
