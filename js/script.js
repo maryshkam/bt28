@@ -1,67 +1,90 @@
-// console.log(0.1 + 0.2 === 0.3);
-// console.log(0.1 + 0.2);
-// let result = 0.1 + 0.2;
-// console.log(result)
-// console.log(Math.floor(result))
-// console.log(Math.ceil(result))
-// console.log(Math.round(result))
-// console.log(result.toFixed(2))
+// // console.log(0.1 + 0.2 === 0.3);
+// // console.log(0.1 + 0.2);
+let result = 0.1 + 0.2;
 
-// let name = 'Bob';
-// let slicedName = name.slice(0, 2);
-// console.log('name', name);
-// console.log("slicedName", slicedName)
+function sum() {
+  // console.log(result);
+  let result = null;
+  // console.log(result);
+  result = 2 + 3;
+  console.log(result);
+  return result;
+}
+console.log(sum());
 
-// function sum() {
-//     let result = null;
-//     result = 2 + 3;
-//     return result;
-// }
+console.log(result);
+// // console.log(result)
+// // console.log(Math.floor(result))
+// // console.log(Math.ceil(result))
+// // console.log(Math.round(result))
+// // console.log(result.toFixed(2))
 
-// const myNewResult = result;
+// let name = "The quick brown fox jumps over the lazy dog.";
+// let slicedName = name.slice(2, 15);
+// console.log("name", name);
+// console.log("slicedName", slicedName);
 
-// console.log("myNewResult", myNewResult)
+// // const myNewResult = result;
 
-// console.log(0 || '' || null); // null
+// // console.log("myNewResult", myNewResult)
 
-// console.log(0 || 'Манго') // Манго
+// console.log(0 || "" || null); // null
 
-// console.log(0 || 'false' || null)
+// console.log(0 || "Манго"); // Манго
 
-// || - перше true
-// && - перше false
+// console.log(0 || "false" || "string");
 
-// console.log('Mango' && null || false);
-// 1) Mango && null // null
-// 2) null ||  // false
+// // || - перше true
+// // && - перше false
 
-// if (null) {
-// console.log("Hello")
+// console.log(("Mango" && null) || 6 || "");
+// // 1) Mango && null // null
+// // 2) null ||  // false
+
+// let someUserValue = 120;
+// if (someUserValue < 50) {
+//   console.log(`some result ${someUserValue}`);
+// } else if (someUserValue < 100) {
+//   console.log(`some result ${someUserValue}`);
 // } else {
-//     console.log("World")
+//   console.log("we don't have any result");
 // }
+
+// if(!someUserValue) {
+//   console.log("some result false");
+// }
+
+let res = 5;
+
+res > 10 ? console.log(true) : console.log(false);
+
+if (res) {
+  console.log("Hello");
+} else {
+  console.log("World");
+}
 
 // Логічні оператори
 // // Що виведе код?
 
-// console.log(true && 3);
+console.log(true && 3);
 
-// console.log(false && 3);
+console.log(false && 3);
 
-// console.log(true && 4 && "hello");
+console.log(true && 4 && "hello");
 
-// console.log(true && 0 && "hello");
+console.log(true && 0 && "hello");
 
-// console.log(true || 3);
+console.log(true || 3);
 
-// console.log(true || 3 || 4);
+console.log(true || 3 || 4);
 
-// console.log(true || false || 7);
+console.log(true || false || 7);
 
-// console.log(null || 2 || undefined);
+console.log(null || 2 || undefined);
 
-// console.log(null || 2 && 3 || 4);
-
+console.log(null || (2 && 3) || 4);
+// null  || 3 || 4
 // if...else и prompt
 // // Используя конструкцию if..else, напишите код, который будет спрашивать: «Какое количество месяцев в году». Если пользователь вводит 12 ,
 // то показать: «Верно!», в противном случае – отобразить: «Не знаете ? 12!»
@@ -69,6 +92,13 @@
 // 1) Попросить у юзера число
 // 2) Проверить равно ли оно 12
 // 3) На основе проверки запустить if или else
+
+// const userNumber = Number(prompt("ВВедіть кількість місяців в році..."));
+// if(userNumber === 12) {
+//   console.log("Вірно! userNumber");
+// } else {
+//   console.log(`Іди вчитись в GoIT тому що введено число ${userNumber} `);
+// }
 
 // const userNumber = Number(prompt('Enter number'));
 
@@ -83,6 +113,13 @@
 // 1) Получить число
 // 2) Написать проверку на чет нечет
 // 3) Вивести результат
+
+// const num = Number(prompt("Введіть число"));
+// if (num % 2 === 0) {
+//   console.log(`${num}-число парне`);
+// } else {
+//   console.log(`${num}-число непарне`);
+// }
 
 // const day = prompt("Enter day");
 
@@ -99,8 +136,34 @@
 // 2) Проверка на время года
 // 3) Вывести результат
 
-// const monthNumber = Number(prompt('enter month number'));
+// const monthNumber = prompt("enter month number");
+// switch (monthNumber) {
+//   case "1":
+//   case "2":
+//   case "12":
+//     console.log("Зима");
+//     break;
 
+//   case "3":
+//   case "4":
+//   case "5":
+//     console.log("Весна");
+//     break;
+
+//   case "6":
+//   case "7":
+//   case "8":
+//     console.log("Літо");
+//     break;
+//   case "9":
+//   case "10":
+//   case "11":
+//     console.log("Осінь");
+//     break;
+
+//   default:
+//     console.log("Invalid type");
+// }
 // if (monthNumber === 1) {
 //     console.log('Зима')
 // } else if (monthNumber === 2) {
@@ -194,15 +257,32 @@
 // Написать программу которая получит от пользователя число (количество минут) и выведёт на экран строку в формате часов и минут.
 
 // for
+// let i = 11;
+// if(i<=10){
+//   console.log("i", i);
+//   i++
+// }
+// if(i<=10){
+//   console.log("i", i);
+//   i++
+// }
+
+console.log("first time");
+
+for (let i = 0; i <= 10; i += 2) {
+  console.log("i", i);
+}
+
+console.log("second time");
 
 // Напишите цикл for который выводит в консоль браузера числа по возрастанию от min до max.
 
 const max = 100;
 const min = 20;
 
-// for (let i = min; i <= max; i += 1) {
-//     console.log(i)
-// }
+for (let i = min; i <= max; i += 10) {
+    console.log(i)
+}
 
 // вывести только числа кратные 10
 
@@ -210,12 +290,16 @@ const min = 20;
 //     console.log(i)
 // } // 10 итераций
 
-// for (let i = min; i <= max; i += 1) {
-//     if (i % 10 === 0) {
-//         console.log(i) // 20  30
-//     }
-//     continue
-// }
+for (let i = 81; i <= 103; i += 1) {
+    if (i % 10 === 0) {
+        console.log(i) // 20  30
+    } else {
+      continue
+      console.log("num");
+    }
+    
+    
+}
 
 // for (let i = min; i <= max; i += 1) {
 //     if (i % 10 !== 0) {
@@ -225,12 +309,14 @@ const min = 20;
 //     console.log(i) // 20  30
 // }
 
-// for (let i = min; i <= max; i += 10) {
-//     if (i === 50) {
-//         break
-//     }
-//     console.log(i)
-// } // 10 итераций
+for (let i = min; i <= max; i += 10) {
+    if (i === 50) {
+      
+        break
+        console.log("finish");
+    }
+    console.log(i)
+} // 10 итераций
 
 // for (let i = min; i < 50; i += 10) {
 
