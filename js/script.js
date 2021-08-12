@@ -146,16 +146,16 @@
 
 const styles = ["Джаз", "Блюз"];
 styles.push("Рок-н-ролл");
-styles[1]= "Классика";
+styles[1] = "Классика";
 // styles.splice(1, 1, "Классика");
 console.log(styles);
-const deleteStyle = styles.splice(0,1);
+const deleteStyle = styles.splice(0, 1);
 console.log(deleteStyle);
 console.log(styles);
 // styles.unshift("Регги");
 // styles.unshift("Рэп");
 
-styles.splice(0,0,"Рэп", "Регги",)
+styles.splice(0, 0, "Рэп", "Регги");
 console.log(styles);
 // const styles = ["Джаз", "Блюз"];
 // styles.push("Рок-н-ролл");
@@ -277,3 +277,4 @@ for (const user of users) {
 
 // 6) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
 // пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран
+
