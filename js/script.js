@@ -1,3 +1,79 @@
+// console.log('console -1');
+
+// let res = show(2,3,6,6,89);
+// // let res2 = show(10,5);
+// // let res3 = show("string", "word")
+// console.log(res);
+// console.log(res2);
+// console.log(res3);
+// console.log('console -2');
+// console.log('console -3');
+// let sum = 5;
+// console.log(sum);
+
+// let resultSum = 5;
+// console.log(resultSum);
+// let summ;
+
+// const result = function (num1,num2){
+//   // let summ = 10;
+//   let result = num1 + num2;
+//   summ = result;
+
+//   return 5;
+//   console.log("hello, I am here yet");
+//   const res = "!!!!!";
+//   console.log(res);
+// }
+// console.log(result(2,12));
+// result();
+// console.log(summ);
+// const bbb = "string"
+// {
+//   console.log(bbb);
+//   let newValue = 5;
+//   console.log(newValue);
+// }
+// // let newValue = true;
+// // console.log(newValue);
+// // function show(num1 = 0,num2 =2, ...args){
+// //   console.log(num1);
+// //   console.log(num2);
+// //   console.log(arguments);
+// //   // const arg =  Array.from(arguments);
+// //   console.log(args);
+// //   // num1 = "kjsfh";
+// //   console.log('console -4');
+// //   // console.log(num1);
+
+// //   return num1 + num2
+// // }
+// console.log("1");
+
+// function a(){
+//   b();
+//   console.log("2");
+// }
+
+// function b(){
+//   c();
+//   console.log(3);
+// }
+
+// function c(){
+//   console.log(4);
+// }
+
+// console.log("5");
+// a();
+// function add (...args){
+// const arr = args;
+// let result = 0;
+// for (const el of arr){
+//  result += el;
+// }
+// return result;
+// }
 // function makeStringFromArray(array, delimeter) {
 //     // let string;
 //     // string = array.join(delimeter);
@@ -22,6 +98,7 @@
 //   function test() {
 //     const c = 10;
 //   }
+
 //   return a + b + c;
 // }
 
@@ -52,14 +129,14 @@
 
 //   return a + b;
 // }
-
+// console.log(sum());
 // let a = 5;
 // let b = 10;
 
 // function sum() {
 //   return a + b;
 // }
-
+// console.log(sum());
 // let a = 5;
 // let b = 10;
 
@@ -106,16 +183,28 @@
 
 // function calculateAverage() {
 //   console.log("arguments", arguments);
-//   const numbers = Array.from(arguments);
-//   let total = 0;
-//   for (let number of numbers) {
-//     total += number;
+//   const clients = Array.from(arguments);//[3,1,6,99]
+//   let total = 10;
+//   for (let client of clients) {
+
+//     total += number;//10 + 99
 //   }
+
 //   const length = numbers.length;
 //   const average = total / length;
 //   return average;
 // }
+function sumNumber(num) {
+  return num + 5;
+}
 
+const secondSum = function (num) {
+  return num + 5;
+};
+
+const funcExs = (num) => num + 5;
+
+console.log(funcExs(2, 6));
 // function calculateAverage() {
 //   console.log("arguments", arguments);
 //   const numbers = Array.from(arguments);
