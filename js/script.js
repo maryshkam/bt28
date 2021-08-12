@@ -1,280 +1,283 @@
-// const array = ["string", 4, true, [], {}, null, undefined];
-
-// const clients = ["Mango", "Poly", "Ajax"];
-// console.log(clients[0]);
-// console.log(clients);
-// clients[1] = "Bob";
-// console.log(clients);
-// // Значение элемента можно заменить
-// // clients[0] = "Kiwi";
-// // console.log(clients[0]); // Kiwi
-// clients[3] = "Sake";
-// console.log(clients[5]);
-// // Или добавить
-// clients[5] = "Alex";
-// console.log(clients);
-// // console.log(clients[3]);
-// // console.log(clients[4]);
-// // console.log(clients[5]);
-// // clients[100] = "Bob";
-// console.log(clients[clients.length - 1]);
-// // console.log(clients); // ["Kiwi", "Poly", "Ajax", "Alex"]
-
-// // 2) Почему не работает консоль лог(words)  внутри функции ?
-// let title = "Arrays for begginers";
-// console.log(title);
-
-// const str = title.split(" ");
-// console.log(str);
-// console.log(str.join(' '));
-
-// function slugify(title) {
-//   // Change code below this line
-//   let normalizedTitle = title.toLowerCase();
-//   const words = normalizedTitle.split(" ");
-//   console.log(words);
+// function makeStringFromArray(array, delimeter) {
+//     // let string;
+//     // string = array.join(delimeter);
+//   //   console.log(string);
+// //   return array.join(delimeter);
 // }
 
-// slugify(title);
-// slugify("Hello bootc");
+// const result = makeStringFromArray([1, 2, 4, 5], "-"); //1-2-4-5
+// const result = makeStringFromArray([1, 2, 4, 5], "!"); //1!2!4!5
+// const result = makeStringFromArray([1, 2, 4, 5], ","); //1,2,4,5
 
-// // 3) Можно ли в значения массива вставлять переменные ?
-// const newClients = ["Monkong", "aaaaa", "Misha", "Singu"];
-// const userName = "Bob";
-// // const oldClients = ["Mango", "Ajax", "Poly", "Kiwi", newClients];
-// // console.log(oldClients);
-// // console.log(oldClients[4][0][2]);
-// // const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"].concat(newClients);
-// const oldClients = [newClients[2], "Mango", "Ajax", "Poly", "Kiwi"];
-// console.log(oldClients);
-// // const number = ["Bob"];
-// // const number2 = [2];
-// // console.log(number + number2);
+// console.log(result);
+// const arr = [1, 2, 4, 5];
 
-// // 4) const для масивов
-// // const clients = ["Mango", "Poly", "Ajax"];
-// // clients = 5;
-// // console.log(clients);
+// [1, 2, 4, 5].join(','); // 1,2,4,5
+// [1, 2, 4, 5].join('-'); // 1-2-4-5
+// [1, 2, 4, 5].join('!'); // 1!2!4!5
 
-// // const arr = [2, 'a', true, null];
+// const c = 20;
 
-// // const aar = [3, 'w']
-// // const a = [true, null]
-
-// // console.log([1, 3, 5] === [1, 3, 5]);
-
-// let a = 5;
-// // a = 9;
-// let b = 5;
-// let c = a;//5
-// console.log(a);
-// console.log(c);
-// // a = 7;
-// console.log(a);
-// console.log(c);
-// console.log(a === c);
-
-// const a1 = [1,2,3];
-// console.log(a1);
-// const a2 = [2,3,4];
-// const b1 = a1// a1
-// console.log(b1);
-// a1[3]= 4;
-// console.log(a1);
-// console.log(b1);
-// // console.log(a1 === a1);
-// const newArr = [];
-// newArr[0] = "string"
-// console.log(newArr);
-// const arr1 = [1, 2, 3, 77, -1]; // link1
-// console.log(arr1.indexOf(-1));
-// arr1[3]=88;
-// console.log(arr1);
-// // const arr2 = [1, 2, 3]; // link2
-
-// const clientsB = ["Mango", "Ajax", "Poly", "Kiwi"];
-// console.log(clientsB.indexOf("Poly")); // 2
-// console.log(clientsB.indexOf("Monkong")); // -1
-
-// const arrResult = [];
-// const secondArr = [1.2,"st"];
-// secondArr[0] = "valid string";
-// console.log(secondArr);
-// showArray(arrResult);
-// console.log(arrResult);
-// arrResult.push("djksfj");
-// const thirdArr = [...secondArr, ...arrResult];
-// console.log(secondArr);
-// console.log(arrResult);
-// arrResult.push("111");
-// arrResult.push("2222");
-// arrResult.push("3");
-// console.log(arrResult);
-
-// function showArray(arr){
-//   console.log(arr);
+// function calc(a, b) {
+//   function test() {
+//     const c = 10;
+//   }
+//   return a + b + c;
 // }
-// showArray(arrResult);
 
-// arrResult.push([2,4]);
-// arrResult.push({"2222":"test"});
-// arrResult.push("3");
-// showArray(arrResult);
-// // console.log(arr1 === arr2);
-// console.log(secondArr);
-// const numbers = [7, 3, 8, 9, 2]; // link1
-// // const newNumbers = numbers.slice(3);
-// const newNumbers = numbers.slice(); // link2
-// console.log("numbers", numbers);
-// console.log(`newNumbers`, newNumbers);
-// numbers.push(4, 5, 6);
+// console.log(calc(5, 15));
+
+// function double(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     array[i] = array[i] * 2; // 2// 4 //6 // 8
+//   }
+// }
+
+// const numbers = [1, 2, 3, 4];
+// double(numbers);
 // console.log(numbers);
 
-// 1) базовые операции с массивом
-// Создайте массив styles с элементами «Джаз» и «Блюз».
-// Добавьте «Рок-н-ролл» в конец.
-// Замените значение в середине на «Классика».
-// Удалите первый элемент и выведите его в консоль.
-// Вставьте «Рэп» и «Регги» в начало массива.
+// a = 5
+// b = 15
+// c = 10
+// a + b + c
+// return
 
-// Массив по ходу выполнения операций:
-// Джаз, Блюз
-// Джаз, Блюз, Рок-н-ролл
-// Джаз, Классика, Рок-н-ролл
-// Классика, Рок-н-ролл
-// Рэп, Регги, Классика, Рок-н-ролл
+// let a = 5;
+// let b = 10;
 
-const styles = ["Джаз", "Блюз"];
-styles.push("Рок-н-ролл");
-styles[1] = "Классика";
-// styles.splice(1, 1, "Классика");
-console.log(styles);
-const deleteStyle = styles.splice(0, 1);
-console.log(deleteStyle);
-console.log(styles);
-// styles.unshift("Регги");
-// styles.unshift("Рэп");
+// function sum() {
+//   let a = 50;
+//   let b = 100;
 
-styles.splice(0, 0, "Рэп", "Регги");
-console.log(styles);
-// const styles = ["Джаз", "Блюз"];
-// styles.push("Рок-н-ролл");
-// styles.splice(1, 1, "Классика");
-// const deletedStyle = styles.shift();
-// styles.unshift("Рэп", "Регги");
-// console.log(deletedStyle);
-// console.log(styles);
-
-const roles = ["user", "tester", "admin"];
-console.log(roles[1]);
-console.log(roles[0]);
-console.log(roles[5]);
-console.log(roles.length);
-console.log(roles[-1]);
-const lastIndex = roles.length - 1;
-console.log(roles[lastIndex]);
-roles.pop();
-console.log(roles);
-const result = roles.push("support");
-console.log(roles);
-roles.shift();
-console.log(roles);
-roles.unshift("manager");
-console.log(roles);
-roles.splice(2, 3);
-console.log(roles);
-roles.splice(2, 1, "user2");
-console.log(roles);
-const value = "Tester";
-// roles.splice(2, 0, "user2");
-// console.log(roles);
-const newArr = roles.slice();
-console.log("newArr", newArr);
-console.log(typeof roles);
-console.log(roles.includes(value.toLowerCase()));
-
-// 2) Напиши функцию logItems(array), которая получает массив и использует цикл for, который для каждого элемента массива
-//будет выводить в консоль сообщение в формате < номер элемента > - <значение элемента >.
-//Нумерация элементов должна начинаться с 1.
-// Например для первого элемента массива['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено
-// 1 - Mango, а для индекса 2 выведет 3 - Ajax.
-
-const users = ["Mango", "Poly", "Ajax"]; // 3
-
-for (let i = 0; i < users.length; i++) {
-  console.log("index", i); // 0 // 1 // 2
-  console.log("value", users[i]); // users[0] // users[1] // users[2]
-}
-
-for (const user of users) {
-  console.log("index", users.indexOf(user));
-  console.log(user); // Mango //Poly  // Ajax
-}
-
-// 3) Напиши код который ищет самое маленькое число в массиве.
-
-// const numbers = [2, 17, 94, 1, 23, 37];
-
-// 1) Определить стартовое минимальное число
-// 2) Сравнить это число со всеми последующими елементами масива
-// 3) Если стартовое число меньше числа с которым сравниваем - оставляем как есть
-// 4) Если стартовое число больше числа с которым срасниваем - пререзаписываем минимальное число
-
-// let smallestNumber = numbers[0]; // 2
-
-// for (let number of numbers) {
-//   // 2 // 17 // 94 // 1 // 23 // 37
-//   if (smallestNumber > number) {
-//     smallestNumber = number; // 1
-//   }
+//   return a + b;
 // }
 
-// console.log(smallestNumber); // 1
+// let a = 5;
+// let b = 10;
 
-// const findSmallestNumber = function (numbers) {
-//   let smallestNumber = numbers[0];
+// function sum() {
+//   return a + b;
+// }
 
-//   for (const number of numbers) {
-//     if (smallestNumber > number) {
-//       smallestNumber = number;
-//     }
+// let a = 5;
+// let b = 10;
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// let a = 5;
+// let b = 10;
+
+// function sum() {
+//   let a = 10;
+
+//   function sum2() {
+//     let a = 30;
+//     return a + b;
 //   }
 
-//   return smallestNumber;
+//   return a + b;
+// }
+
+// let a = 5;
+// let b = 10;
+
+// function sum() {
+//   let a = sum2(); // 40
+
+//   function sum2() {
+//     let a = 30;
+//     return a + b;
+//   }
+
+//   return a + b;
+// }
+
+// console.log(sum()); // 50
+
+//1) Напиши функцию calculateAverage() которая принимает произвольное кол-во аргументов и возвращает их
+// среднее значение.Все аругменты будут только числами.
+
+// 1) Нужно посчитать суму всех аргументов
+//2) Посчитать средьнее значение
+//3) Вывести результат на экран
+
+// function calculateAverage() {
+//   console.log("arguments", arguments);
+//   const numbers = Array.from(arguments);
+//   let total = 0;
+//   for (let number of numbers) {
+//     total += number;
+//   }
+//   const length = numbers.length;
+//   const average = total / length;
+//   return average;
+// }
+
+// function calculateAverage() {
+//   console.log("arguments", arguments);
+//   const numbers = Array.from(arguments);
+//   let total = 0;
+//   for (let number of numbers) {
+//     total += number;
+//   }
+//   return (total / numbers.length).toFixed(2);
+// }
+
+// console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+// console.log(calculateAverage(14, 8, 2)); // 8
+// console.log(calculateAverage(27, 43, 2, 8, 36)); // 23.2
+
+// 2) Напишите функцию greet(name), которая при вызове будет получать имя(например, «Василий») и логировать строку «Привет, <имя>».
+// В случае отсутствующего аргумента выводить «Привет, гость»
+
+// const greet = function (name = "гость") {
+//   return `Привет ${name}`;
 // };
 
-// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37])); // 1
-// console.log(findSmallestNumber([49, 4, 83, 7, 12])); // 4
+// console.log(greet("Манго"));
+// console.log(greet());
 
-// 4) Проверить является ли строка палиндромом
+// const greet = function (name = "гость") {
+//   console.log(`Привет ${name}`);
+// };
 
-// const str = "довод";
-// const newString = "Hello";
+// greet("Манго");
+// greet();
 
-// 1) Сделать со строки масив
-// 2) Перевевнуть масив наоборот
-// 3) С масива сделать строку
-// 4) Сравнить 2 строки
+// 3) Выполните рефакторинг заменив объявление функции на стрелочную функцию.
 
-// const array = str.split("");
-// array.reverse();
-// const reverseString = array.join("");
-// console.log(reverseString);
+// function checkNumbers(a, b) {
+//   if (a > b) {
+//     return `число ${a} больше ${b}`;
+//   }
 
-// const reverseStringWithChaining = newString.split("").reverse().join("");
+//   return `число ${b} больше ${a}`;
+// }
 
-// console.log(newString === reverseStringWithChaining);
+// const checkNumbers = function (a, b) {
+//   if (a > b) {
+//     return `число ${a} больше ${b}`;
+//   }
 
-// const strSplit = str.split("").reverse().join("");
-// console.log(strSplit);
-// console.log(str === strSplit);
+//   return `число ${b} больше ${a}`;
+// };
 
-// 5) Проверить если корзину пуста - показать фразу "Пустая корзина" иначе показать фразу "В корзине {х} товаров"
-// где х - это количество товаров в корзине
+// const checkNumbers = (a, b) => {
+//   if (a > b) {
+//     return `число ${a} больше ${b}`;
+//   }
 
-// const basket = [];
-// const basket = ["Хлеб", "Молоко", "Конфеты"];
+//   return `число ${b} больше ${a}`;
+// };
 
-// 6) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
+// const checkNumbers = (a, b) => {
+//   return a > b ? `число ${a} больше ${b}` : `число ${b} больше ${a}`;
+// };
+
+// const checkNumbers = (a, b) =>
+//   a > b ? `число ${a} больше ${b}` : `число ${b} больше ${a}`;
+
+// 5) Написать ф - ю capitalize которая буде принимать строку и будет возвращать новую где каждое слово будет с большой буквы
+// capitalize('the quick brown fox') // 'The Quick Brown Fox '
+
+// function capitalize(string) {
+//   const arrayFromString = string.split(" ");
+//   const newArray = [];
+
+//   for (let word of arrayFromString) {
+//     let firstLetter = word[0].toUpperCase();
+//     let restString = word.slice(1);
+//     let finalString = `${firstLetter}${restString}`;
+//     newArray.push(finalString);
+//   }
+//   return newArray.join(" ");
+// }
+
+// console.log(capitalize("the quick brown fox"));
+
+// function capitalize (string) {
+//     const arr = string.split(' ')
+//     const finalArray =[]
+//     for(let word of arr) {
+//         const firstLetter = word[0].toUpperCase()
+//         const restString = word.slice(1)
+//         const result = firstLetter + restString;
+//         finalArray.push(result)
+//     }
+//     const finalString = finalArray.join(' ')
+//     return finalString
+// }
+
+// 6) Напишите функции для работы с коллекцией обучающих курсов courses:
+
+// addCourse(name) - добавляет курс в конец коллекции
+// removeCourse(name) - удаляет курс из коллекции
+// updateCourse(oldName, newName)- изменяет имя на новое
+
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// function addCourse(course) {
+//   if (courses.includes(course)) {
+//     console.log("У вас уже есть такое курс");
+//     return;
+//   }
+//   courses.push(course);
+// }
+
+// const addCourse = (course) => {
+//   if (courses.includes(course)) {
+//     console.log("У вас уже есть такое курс");
+//     return;
+//   }
+//   courses.push(course);
+// };
+
+// const removeCourse = (course) => {
+//   const courseIndex = courses.indexOf(course);
+//   if (courseIndex === -1) {
+//     console.log("Курс с таким имененем не найден");
+//     return;
+//   }
+//   courses.splice(courseIndex, 1);
+// };
+
+// const updateCourse = (courseToDelete, courseToAdd) => {
+//   const index = courses.indexOf(courseToDelete);
+//   courses.splice(index, 1, courseToAdd);
+//   //   courses[index] = courseToAdd;
+//   //   removeCourse(courseToDelete);
+//   //   addCourse(courseToAdd);
+// };
+
+// addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// addCourse("CSS"); // 'У вас уже есть такое курс'
+// removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse("Vue"); // 'Курс с таким имененем не найден'
+// updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+
+// console.log(courses);
+
+// 7) Написать ф-ю которая принимает строку в rem и возвращает ответ в пикселях
+// toPX('2rem') //32px
+// toPX('1rem') //16px
+
+// 8) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
 // пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран
 
+// 9) Написать ф - ю конвертыции валют где мы передаем суму, валюту из которой переводим и валюту в которую переводим
+// Эта ф-я возвращает суму в той валюте в которуюу переводили
+// const usdToEur = 0.82;
+// const eurToUsd = 1.21;
+// const usdToBtc = 0.000026;
+// const btcToUsd = 38630.7;
+// const eurToBtc = 0.000031;
+// const btcToEur = 31864.3;
+
+// const USD = "USD";
+// const EUR = "EUR";
+// const BTC = "BTC";
+
+// function convert(sum, from, to) {}
