@@ -1,372 +1,114 @@
-// //  const show = (obj)=> {
-
-// //  }
-// const book = {
-//   title: "The Last Kingdom",
-// //   author: "Bernard Cornwell",
-// //   genres: ["historical prose", "adventure"],
-// //   public: true,
-// //   rating: 8.38,
-// //   tom: { key: [1, 3, 4], name: "Tom Soyer", age: 56 },
-// //   group: [
-// //     { name: "28bootcamp", "num students": [9, 12], age: 25, isActive: true },
-// //     { name: "25bootcamp", num: 19 },
-// //   ],
-// //   show(value){
-// //     return this[value];
-// //   }
-
-// // };
-// // // console.log(book.show());
-// // console.log(book.show("group"));
-
-// // console.log(book.group[0]["num students"][1]);
-// // console.log(book.page);
-// // book.author = "Serega";
-// // console.log(book);
-// // book.page = 2356;
-// // console.log(book);
-// // const arr = [
-// //   {
-// //     title: "The Last Kingdom",
-// //     author: "Bernard Cornwell",
-// //     genres: ["historical prose", "adventure"],
-// //     public: true,
-// //     rating: 8.38,
-// //   },
-// //   {
-// //     title: "The Last Kingdom",
-// //     author: "Bernard Cornwell",
-// //     genres: ["historical prose", "adventure"],
-// //     public: true,
-// //     rating: 8.38,
-// //   },
-// // ];
-// // console.log(book);
-
-// // const name = "Генри Сибола";
-// // const age = 75;
-
-// // const user = {
-// //   name,//"Генри Сибола"
-// //   age: age*2,//25
-// // };
-// // console.log(user.age);
-// const propName = "city";
 // const user = {
+//   name: "Jacques Gluke",
+//   tag: "jgluke",
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const {
+//   followers,
+//   views,
+//   likes
+// } = user.stats;
+// const userA = {...user, name: "Bob"} ;
+// console.log(user);
+// console.log(userA);
+// console.log(name); // Jacques Gluke
+// console.log(tag); // jgluke
+// console.log(stats);
+// console.log(followers); // 5603
+// console.log(likes); // 4827
+// console.log(userLikes); // 1308
+
+
+
+
+
+// const arr = ["cat", "dog", "elephant", "lion", "tiger", "mouse"];
+// const arr2 = [...arr.slice(4)];
+// console.log(arr2);
+// // 1) 
+// const copy = [...arr];
+// console.log(copy);
+// // //2) const smallArr = copy.slice(4)
+// const smallArr = copy.slice(4);
+// console.log(smallArr);
+// // // 3) arr2[...smallArr]
+// arr2[0] = 7;
+// console.log(arr2);
+// console.log(arr);
+// console.log(arr2);
+
+// const user = {
+//   name: "Bob",
 //   age: 25,
-// };
-// console.log(user);
-// // user.page =39;
-// // user["age"] = 57;
-// user[propName] = "Генри Сибола";
-// console.log(user);
-
-// // console.log(user.name);
-// const a = {a:1, b:1};
-// const b = a;
-// const c = b;
-// console.log(a === b);
-// console.log(c===a);
-
-// c["text"] = "string";
-// console.log(c);
-// console.log(a);
-// a.title = "js";
-// console.log(a);
-// console.log(c);
-
-// const obj2 = user;//link
-// console.log(obj2);
-// console.log(obj2 === user);
-
-// const shelf = {
-//   books: ["The Last Kingdom", "Dream Guardian"],
-//   // Это метод объекта
-//   getBooks() {
-//     console.log(this);
-//     console.log(this.books);
-//     this.addBook("test");
+//   isPremium: true,
+//   showUserInfo() {
+//     // const this = objLink
+//     // const arguments
+//     return `UserName is ${this.name}, userAge: ${this.age}, userStatus: ${this.isPremium}`; // Error
 //   },
-//   // Это метод объекта
-//   addBook(bookName) {
-//     this.books.push(bookName);
-//     console.log("Этот метод будет добавлять новую книгу в свойство books");
-//   },
-//   // removeBook(bookName) {
-
-//   // }
 // };
 
-// shelf.getBooks();
-// shelf.addBook("Deathworld", "Harry Potter");
-// shelf.getBooks();
-// shelf.addBook("House of cards");
-// shelf.getBooks();
+// const name = user.name;
+// const age = user.age;
+// const status = user.isPremium;
 
-// const animal = {
-//   legs: 4,
+// const { name, age, isPremium: status } = user;
+
+// console.log(`name`, name);
+// console.log(`age`, age);
+// console.log(`status`, status);
+
+// const response = {
+//   status: "ok",
+//   data: [1, 2, 3, 4],
+//   isLoading: false,
 // };
-// console.log(animal);
-// const dog = Object.create(animal);
 
-// dog.name = "Манго";
-// dog.age =2;
-// dog.color = "black"
-// console.log(dog);
-// dog.legs = 3;
-// console.log(dog.legs);
-// console.log(dog.hasOwnProperty("legs"));
-// dog.legs = 3;
-// console.log(dog.hasOwnProperty("legs"));
-// for (const key in dog){
-//   if (key === "legs"){
-//     console.log("I have legs");
-//   }
-// }
-const book = {
-  title: "The Last Kingdom",
-  author: "Bernard Cornwell",
-  genres: ["historical prose", "adventure"],
-  rating: 8.38,
-};
-const keys = Object.keys(book);
-console.log(keys);
-const values = Object.values(book);
+// const response2 = {
+//   status: "ok",
+//   data: "Hello World",
+//   isLoading: true,
+// };
 
-const list = {
-  stereo: 5,
-  tv: 25,
-  dvd: 2,
-};
+// const { status, data } = response;
 
-const num = Object.keys(list).length;
-console.log(num);
-const val = Object.values(list);
-console.log(val);
-const entries = Object.entries(list);
-console.log(entries);
+// console.log(`status`, status);
+// console.log(`data`, data);
 
-// console.log(dog); // {name: 'Манго'}
-// console.log(dog.name); // 'Манго'
-// console.log(dog.legs); // 4
+// const { status: userStatus, data: userData } = response2;
 
-// function countProps(object) {
-//   let propCount = 0;
-//   //   let arr = [];
-//   const arr = [];
-
-//   const keys = Object.keys(object);
-//   for (key of keys) {
-//     arr.push(key);
-//   }
-//   // arr - []
-//   // arr - ['mail', 'isOnline', 'score']
-//   console.log(arr);
-//   propCount = arr.length;
-//   console.log(arr.length);
-
-//   return propCount;
+// function renderHeader(user) {
+//   const { name, age, status } = user;
+//   console.log(
+//     `User name is ${name.toUpperCase()}, user age is ${age}, user status ${status}`
+//   );
 // }
 
-// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
-
-// Можем ли мы использовать this вместо hotel в этом примере из конспекта?
-const hotel = {
-  name: "Resort Hotel",
-  stars: 5,
-  capacity: 100,
-  //   showName() {
-  //     console.log(`this`, this);
-  //     // console.log(`name =`, this.name);
-  //   },
-
-  //     showName: function () {
-  //       // this = hotel
-  //         // clg
-  //     console.log(`this`, this);
-  //   },
-};
-
-// hotel.showName();
-
-// const keys = Object.keys(hotel);
-// const values = Object.values(hotel);
-// const entries = Object.entries(hotel); //[[name, 'Resort Hotel'], [stars, '5'], [capacity, 100]]
-// const obj = Object.fromEntries(entries);
-
-// console.log(`keys`, keys);
-// console.log(`values`, values);
-// console.log(`entries`, entries);
-// console.log(`obj`, obj);
-
-// const a = { x: 1, y: 2 };
-// const b = { x: 0, z: 3 };
-
-// const c = { x: 5, j: 10, ...a, z: 15, ...b };
-// // x :1 => x: 5 перезаписиваем на x: 1
-// // y : 2 => y : 2
-// // x: 0 => x : 1 переписиваем на x:0
-// // z: 3 => z: 15 переписиваем на z: 3
-
-// console.log(c); // {x: 0, j: 10, y: 2, z: 3}
-//можно уточнить, почему  в получившемся объекте, Х = 0, а не 5 ?
-
-// const newSettings = {
-//   theme: "Default",
-// };
-
-// const pinkSettings = {
-//   theme: "Pink",
-//   font: "Open",
-//   size: "15px",
-// };
-
-// const siteSettings = {
-//   theme: "Dark",
-//   font: "monospace",
-//   navbarPosition: "fixed",
-//   ...pinkSettings,
-// };
-
-// console.log(`settings`, siteSettings);
-
-// Optional Chaining ?.
-
-// const car = {
-//   speed: {
-//     value: 150,
-//     unit: "mph",
-//   },
-//   doors: 5,
-//   wheels: {
-//     value: 5,
-//     // size: {
-//     //   big: "Large",
-//     // },
-//   },
-// };
-// console.log(car.wheels.value);
-// console.log(car.wheels && car.wheels.value);
-
-// if (car.wheels) {
-//   console.log(car.wheels.value);
+// function renderHeader({ name, age, status }) {
+//   console.log(
+//     `User name is ${name.toUpperCase()}, user age is ${age}, user status ${status}`
+//   );
 // }
 
-// console.log(car.wheels?.size?.big);
-
-// car.wheels // undefined
-// undefined.value
-// console.log(car.speed?.value);
-// console.log(car.speed?.whatever);
-// console.log(car.speed?.whatever?.value);
-
-// 1)  Напиши скрипт, который, для объекта user, последовательно:
-
-// добавляет поле mood со значением 'happy'
-// заменяет значение hobby на 'skydiving'
-// заменяет значение premium на false
-// выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of
-
-// const user = {
-//   name: "Mango",
-//   age: 20,
-//   hobby: "html",
-//   premium: true,
+// const person = {
+//   age: 15,
+//   status: true,
+//   name: "Bob",
 // };
 
-// user.mood = "happy";
-// user.hobby = "skydiving";
-// user.premium = false;
+// renderHeader("Bob", 15, true);
+// renderHeader(15, true, "Bob");
+// renderHeader(person);
 
-// const keys = Object.keys(user);
-// console.log(`keys`, keys);
-
-// for (let key of keys) {
-//   // key = 'name'
-//   // key = 'age'
-//   console.log(`${key} : ${user[key]}`);
-// }
-
-// console.log(user);
-
-// 2) У нас есть объект, в котором хранятся зарплаты нашей команды.
-// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum.
-// Должно получиться 390. Если объект salaries пуст, то результат должен быть 0.
-
-// const salaries = {
-//   John: 100,
-//   Ann: 160,
-//   Pete: 130,
-// };
-
-// const money = Object.values(salaries);
-// console.log(`money`, money);
-// let total = 0;
-
-// for (let element of money) {
-//   total += element;
-// }
-
-// console.log(`total`, total);
-
-// function calculateSalaries(salaries) {
-//   const money = Object.values(salaries);
-//   console.log(`money`, money);
-//   let total = 0;
-
-//   for (let element of money) {
-//     total += element;
-//   }
-//   return total;
-// }
-
-// console.log("result", calculateSalaries(salaries));
-
-// 3) Напишите ф - цию calcTotalPrice(stones, stoneName), которая принимает массив обьектов и строку с названием камня.
-// Ф - ция считает и возвращает общую стоимость камней с таким именем, ценой и количеством из обьекта
-
-// const stones = [
-//   { name: "Изумруд", price: 1300, quantity: 4 },
-//   { name: "Бриллиант", price: 2700, quantity: 3 },
-//   { name: "Сапфир", price: 400, quantity: 7 },
-//   { name: "Щебень", price: 200, quantity: 2 },
-// ];
-
-// console.log(`result`, calcTotalPrice(stones, "Бриллиант")); // 8100
-
-// 4) Создайте объект calculator(калькулятор) с тремя методами:
-// read()- запрашивает два значения и сохраняет их как свойства объекта.
-// sum() - возвращает сумму сохранённых значений.
-// mult() - перемножает сохранённые значения и возвращает результат.
-
-// const calculator = {
-//   a: null,
-//   b: null,
-
-//   read() {
-//     this.a = prompt("Enter A value");
-//     this.b = prompt("Enter B value");
-//   },
-
-//   sum() {
-//     return Number(this.a) + Number(this.b);
-//   },
-
-//   mult() {
-//     return this.a * this.b;
-//   },
-// };
-
-// console.log("before read", calculator);
-// calculator.read();
-// console.log("after read", calculator);
-// console.log(`sum`, calculator.sum());
-// console.log(`mult`, calculator.mult());
+// console.log(person.showUserInfo());
 
 // 5) Напиши скрипт управления личным кабинетом интернет банка.
 // Есть объект account в котором необходимо реализовать методы для работы с балансом и историей транзакций.
-
 /*
  * Типов транзацкий всего два.
  * Можно положить либо снять деньги со счета.
@@ -376,21 +118,21 @@ const hotel = {
 //   WITHDRAW: "withdraw",
 // };
 
-/*
- * Каждая транзакция это объект со свойствами: id, type и amount
- */
+// /*
+//  * Каждая транзакция это объект со свойствами: id, type и amount
+//  */
 
-// const account = {
-//   // Текущий баланс счета
+//  const account = {
+// //   // Текущий баланс счета
 //   balance: 0,
-
-//   // История транзакций
+// //
+// //   // История транзакций
 //   transactions: [],
 
-//   /*
-//    * Метод создает и возвращает объект транзакции.
-//    * Принимает сумму и тип транзакции.
-//    */
+// //   /*
+// //    * Метод создает и возвращает объект транзакции.
+// //    * Принимает сумму и тип транзакции.
+// //    */
 //   createTransaction(amount, type) {
 //     return {
 //       id: this.transactions.length,
@@ -405,7 +147,11 @@ const hotel = {
 //    * Вызывает createTransaction для создания объекта транзакции
 //    * после чего добавляет его в историю транзакций
 //    */
-//   deposit(amount) {},
+//   deposit(amount) {
+//     this.balance += amount;
+//     const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     this.transactions.push(transaction);
+//   },
 
 //   /*
 //    * Метод отвечающий за снятие суммы с баланса.
@@ -416,24 +162,281 @@ const hotel = {
 //    * Если amount больше чем текущий баланс, выводи сообщение
 //    * о том, что снятие такой суммы не возможно, недостаточно средств.
 //    */
-//   withdraw(amount) {},
+//   withdraw(amount) {
+//     this.balance -= amount;
+//     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     this.transactions.push(transaction);
+//   },
 
 //   /*
 //    * Метод возвращает текущий баланс
 //    */
-//   getBalance() {},
+//   getBalance() {
+//     return this.balance;
+//   },
 
 //   /*
 //    * Метод ищет и возвращает объект транзации по id
 //    */
-//   getTransactionDetails(id) {},
+//   getTransactionDetails(id) {
+//     for (let transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//     return "Transaction Not Exist";
+//   },
 
 //   /*
 //    * Метод возвращает количество средств
 //    * определенного типа транзакции из всей истории транзакций
 //    */
-//   getTransactionTotal(type) {},
+//   getTransactionTotal(type) {
+//     const filteredTransactions = [];
+//     let total = 0;
+//     for (let transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         filteredTransactions.push(transaction);
+//       }
+//     }
+
+//     for (let transaction of filteredTransactions) {
+//       total += transaction.amount;
+//     }
+//     return total;
+//   },
 // };
 
 // console.log(`account`, account);
 // console.log("result", account.createTransaction(100, Transaction.DEPOSIT));
+// account.deposit(100);
+// account.deposit(115);
+// account.withdraw(50);
+// account.withdraw(50);
+// console.log(account.getTransactionDetails(2));
+// console.log("balance", account.getBalance());
+// console.log(`history`, account.transactions);
+// console.log(`filter`, account.getTransactionTotal(Transaction.DEPOSIT));
+
+// let a = {
+//     x: 1,
+//     y: 2
+// }
+
+// let b = {
+//     z: 5,
+//     y: 4
+// }
+
+// let c = {
+//     w: 7,
+//     z: 8
+// }
+
+// let final = {
+//     ...a,
+//     ...c,
+//     ...b
+// }
+// console.log(final);
+
+// const sum = (a,...args) => {
+//     console.log(args);
+// }
+
+// sum(1,2,3,4,5)
+
+// let user = {
+//     name: 'User',
+//     age: 23,
+//     isFrontend: true
+// }
+
+// let a = user.name;
+// let b = user.age;
+// let c = user.isFrontend;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+// const  {age} = user;
+// console.log(age);
+// Написатm  ф-ю которая принимает 2 параметра (обект заказа и обект с ценами товара)
+//Эта ф-я должна возвращать цену заказа
+
+const productsPrice = {
+    apple: 20,
+    orange: 5,
+    cheese: 12,
+    pork: 45,
+    bread: 23
+}
+
+const orderA = {
+    apple: 5,
+    cheese: 1,
+    bread: 3
+}
+
+const orderB = {
+    orange: 10,
+    pork: 2,
+    bread: 1
+}
+
+// 1) перевірити чи є товари
+// 2) якщо є, то визначити ціну за кількість товару
+// 3) визначити загальну суму товарів;
+
+function orderSum (orderList, priceList) {
+  const list = [];
+  let total = 0;
+  for (const orderItem in orderList) {
+   if(priceList.hasOwnProperty(orderItem)){
+     const summ = orderList[orderItem] * priceList[orderItem];
+    list.push(summ);
+   }
+  }
+  for(const el of list){
+    total += el;
+  }
+
+  return total;
+
+}
+console.log(orderSum(orderA,productsPrice));
+console.log(orderSum(orderB,productsPrice));
+
+// Написать ф-ю isObjectEmpty которая проверяет пустой ли обект  Если обект пустой то возвращаем true иначе false
+// isObjectEmpty({}) // true
+// isObjectEmpty({name: 'user, age: {21}}) // false
+
+// НАписать ф-ю которая формирует новый обект из предыдущих
+
+//  let desc = {
+//     title: 'Warior',
+//     year: 2019,
+//     time: 120
+// }
+// let trailer = {
+//     id: 2,
+//     url: 'youtube/trailer/warior&2019'
+// }
+
+// let similarMovies = {
+//     id: 5,
+//     count: 5,
+//     filmList : [
+//         {
+//             title: 'Movie1',
+//             year: 2010,
+//             time: 90
+//         },
+//         {
+//             title: 'Movie2',
+//             year: 2010,
+//             time: 100
+//         },{
+//             title: 'Movie2',
+//             year: 2010,
+//             time: 85
+//         }
+//     ]
+// }
+
+// let filmInfo = {
+//     ...desc,
+//     ...similarMovies,
+//     ...trailer,
+//     budget: '100000$',
+//     time: 150,
+// }
+
+// function sum(...args) {
+//   console.log(`arguments`, arguments);
+//   const numbers = [...arguments];
+//   console.log(`numbers`, numbers);
+//   console.log(`args`, args);
+// }
+
+// function sum(a, b, ...numbers) {
+//   console.log(`numbers`, numbers);
+//   const firstNumbers = [a, b];
+//   console.log(`a`, a);
+//   console.log(firstNumbers);
+// }
+
+// sum(1, 2, 3, 4, 5);
+
+// const sum = () => {
+//   console.log(`arduments`, arguments);
+// };
+
+// function sum(...numbers) {
+//     let total = 0;
+//     for (let el of numbers) {
+//         total += el;
+//     }
+//     return total;
+// }
+// console.log(sum(5, 6, 7, 82, 41, 225));
+
+// Props
+// args as obj
+
+// const atTheOldToad = {
+//     potions: [
+//       { name: 'Speed potion', price: 460 },
+//       { name: 'Dragon breath', price: 780 },
+//       { name: 'Stone skin', price: 520 },
+//     ],
+//     // Change code below this line
+//     getPotions() {
+//       return this.potions;
+//     },
+//     addPotion(potionName) {
+//       if (this.potions.includes(potionName)) {
+//         return `Potion ${potionName} is already equipped!`;
+//       }
+
+//       this.potions.push(potionName);
+//     },
+//     removePotion(potionName) {
+//       const potionIndex = this.potions.indexOf(potionName);
+
+//       if (potionIndex === -1) {
+//         return `Potion ${potionName} is not in inventory!`;
+//       }
+
+//       this.potions.splice(potionIndex, 1);
+//     },
+//     updatePotionName(oldName, newName) {
+//       const potionIndex = this.potions.indexOf(oldName);
+
+//       if (potionIndex === -1) {
+//         return `Potion ${oldName} is not in inventory!`;
+//       }
+
+//       this.potions.splice(potionIndex, 1, newName);
+//     },
+//     // Change code above this line
+//   };
+
+// const potions = [
+//   { name: "Speed potion", price: 460 },
+//   { name: "Dragon breath", price: 780 },
+//   { name: "Stone skin", price: 520 },
+// ];
+
+// function getAllProps(propName) {
+//   const result = [];
+//   for (let potion of potions) {
+//     if (potion[propName] !== undefined) {
+//       result.push(potion[propName]);
+//     }
+//   }
+//   return result;
+// }
+// console.log(getAllProps("price"));
+//  ['Speed potion', 'Dragon breath', 'Stone skin']

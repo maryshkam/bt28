@@ -1,10 +1,2 @@
-Создание обекта
-Доступ к свойствам
-Короткие свойства
-Динамические свойства
-?.
-this в обекте
-for in
-Object.keys(), 
-Object.values(), 
-Object.entries()
+spread and rest
+destruct obj and arr
