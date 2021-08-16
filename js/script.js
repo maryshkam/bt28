@@ -1,372 +1,439 @@
-// console.log('console -1');
+// //  const show = (obj)=> {
 
-// let res = show(2,3,6,6,89);
-// // let res2 = show(10,5);
-// // let res3 = show("string", "word")
-// console.log(res);
-// console.log(res2);
-// console.log(res3);
-// console.log('console -2');
-// console.log('console -3');
-// let sum = 5;
-// console.log(sum);
+// //  }
+// const book = {
+//   title: "The Last Kingdom",
+// //   author: "Bernard Cornwell",
+// //   genres: ["historical prose", "adventure"],
+// //   public: true,
+// //   rating: 8.38,
+// //   tom: { key: [1, 3, 4], name: "Tom Soyer", age: 56 },
+// //   group: [
+// //     { name: "28bootcamp", "num students": [9, 12], age: 25, isActive: true },
+// //     { name: "25bootcamp", num: 19 },
+// //   ],
+// //   show(value){
+// //     return this[value];
+// //   }
 
-// let resultSum = 5;
-// console.log(resultSum);
-// let summ;
+// // };
+// // // console.log(book.show());
+// // console.log(book.show("group"));
 
-// const result = function (num1,num2){
-//   // let summ = 10;
-//   let result = num1 + num2;
-//   summ = result;
+// // console.log(book.group[0]["num students"][1]);
+// // console.log(book.page);
+// // book.author = "Serega";
+// // console.log(book);
+// // book.page = 2356;
+// // console.log(book);
+// // const arr = [
+// //   {
+// //     title: "The Last Kingdom",
+// //     author: "Bernard Cornwell",
+// //     genres: ["historical prose", "adventure"],
+// //     public: true,
+// //     rating: 8.38,
+// //   },
+// //   {
+// //     title: "The Last Kingdom",
+// //     author: "Bernard Cornwell",
+// //     genres: ["historical prose", "adventure"],
+// //     public: true,
+// //     rating: 8.38,
+// //   },
+// // ];
+// // console.log(book);
 
-//   return 5;
-//   console.log("hello, I am here yet");
-//   const res = "!!!!!";
-//   console.log(res);
-// }
-// console.log(result(2,12));
-// result();
-// console.log(summ);
-// const bbb = "string"
-// {
-//   console.log(bbb);
-//   let newValue = 5;
-//   console.log(newValue);
-// }
-// // let newValue = true;
-// // console.log(newValue);
-// // function show(num1 = 0,num2 =2, ...args){
-// //   console.log(num1);
-// //   console.log(num2);
-// //   console.log(arguments);
-// //   // const arg =  Array.from(arguments);
-// //   console.log(args);
-// //   // num1 = "kjsfh";
-// //   console.log('console -4');
-// //   // console.log(num1);
+// // const name = "Генри Сибола";
+// // const age = 75;
 
-// //   return num1 + num2
-// // }
-// console.log("1");
+// // const user = {
+// //   name,//"Генри Сибола"
+// //   age: age*2,//25
+// // };
+// // console.log(user.age);
+// const propName = "city";
+// const user = {
+//   age: 25,
+// };
+// console.log(user);
+// // user.page =39;
+// // user["age"] = 57;
+// user[propName] = "Генри Сибола";
+// console.log(user);
 
-// function a(){
-//   b();
-//   console.log("2");
-// }
+// // console.log(user.name);
+// const a = {a:1, b:1};
+// const b = a;
+// const c = b;
+// console.log(a === b);
+// console.log(c===a);
 
-// function b(){
-//   c();
-//   console.log(3);
-// }
+// c["text"] = "string";
+// console.log(c);
+// console.log(a);
+// a.title = "js";
+// console.log(a);
+// console.log(c);
 
-// function c(){
-//   console.log(4);
-// }
+// const obj2 = user;//link
+// console.log(obj2);
+// console.log(obj2 === user);
 
-// console.log("5");
-// a();
-// function add (...args){
-// const arr = args;
-// let result = 0;
-// for (const el of arr){
-//  result += el;
-// }
-// return result;
-// }
-// function makeStringFromArray(array, delimeter) {
-//     // let string;
-//     // string = array.join(delimeter);
-//   //   console.log(string);
-// //   return array.join(delimeter);
-// }
+// const shelf = {
+//   books: ["The Last Kingdom", "Dream Guardian"],
+//   // Это метод объекта
+//   getBooks() {
+//     console.log(this);
+//     console.log(this.books);
+//     this.addBook("test");
+//   },
+//   // Это метод объекта
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//     console.log("Этот метод будет добавлять новую книгу в свойство books");
+//   },
+//   // removeBook(bookName) {
 
-// const result = makeStringFromArray([1, 2, 4, 5], "-"); //1-2-4-5
-// const result = makeStringFromArray([1, 2, 4, 5], "!"); //1!2!4!5
-// const result = makeStringFromArray([1, 2, 4, 5], ","); //1,2,4,5
+//   // }
+// };
 
-// console.log(result);
-// const arr = [1, 2, 4, 5];
+// shelf.getBooks();
+// shelf.addBook("Deathworld", "Harry Potter");
+// shelf.getBooks();
+// shelf.addBook("House of cards");
+// shelf.getBooks();
 
-// [1, 2, 4, 5].join(','); // 1,2,4,5
-// [1, 2, 4, 5].join('-'); // 1-2-4-5
-// [1, 2, 4, 5].join('!'); // 1!2!4!5
+// const animal = {
+//   legs: 4,
+// };
+// console.log(animal);
+// const dog = Object.create(animal);
 
-// const c = 20;
-
-// function calc(a, b) {
-//   function test() {
-//     const c = 10;
+// dog.name = "Манго";
+// dog.age =2;
+// dog.color = "black"
+// console.log(dog);
+// dog.legs = 3;
+// console.log(dog.legs);
+// console.log(dog.hasOwnProperty("legs"));
+// dog.legs = 3;
+// console.log(dog.hasOwnProperty("legs"));
+// for (const key in dog){
+//   if (key === "legs"){
+//     console.log("I have legs");
 //   }
-
-//   return a + b + c;
 // }
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
+};
+const keys = Object.keys(book);
+console.log(keys);
+const values = Object.values(book);
 
-// console.log(calc(5, 15));
-
-// function double(array) {
-//   for (let i = 0; i < array.length; i++) {
-//     array[i] = array[i] * 2; // 2// 4 //6 // 8
-//   }
-// }
-
-// const numbers = [1, 2, 3, 4];
-// double(numbers);
-// console.log(numbers);
-
-// a = 5
-// b = 15
-// c = 10
-// a + b + c
-// return
-
-// let a = 5;
-// let b = 10;
-
-// function sum() {
-//   let a = 50;
-//   let b = 100;
-
-//   return a + b;
-// }
-// console.log(sum());
-// let a = 5;
-// let b = 10;
-
-// function sum() {
-//   return a + b;
-// }
-// console.log(sum());
-// let a = 5;
-// let b = 10;
-
-// function sum(a, b) {
-//   return a + b;
-// }
-
-// let a = 5;
-// let b = 10;
-
-// function sum() {
-//   let a = 10;
-
-//   function sum2() {
-//     let a = 30;
-//     return a + b;
-//   }
-
-//   return a + b;
-// }
-
-// let a = 5;
-// let b = 10;
-
-// function sum() {
-//   let a = sum2(); // 40
-
-//   function sum2() {
-//     let a = 30;
-//     return a + b;
-//   }
-
-//   return a + b;
-// }
-
-// console.log(sum()); // 50
-
-//1) Напиши функцию calculateAverage() которая принимает произвольное кол-во аргументов и возвращает их
-// среднее значение.Все аругменты будут только числами.
-
-// 1) Нужно посчитать суму всех аргументов
-//2) Посчитать средьнее значение
-//3) Вывести результат на экран
-
-// function calculateAverage() {
-//   console.log("arguments", arguments);
-//   const clients = Array.from(arguments);//[3,1,6,99]
-//   let total = 10;
-//   for (let client of clients) {
-
-//     total += number;//10 + 99
-//   }
-
-//   const length = numbers.length;
-//   const average = total / length;
-//   return average;
-// }
-function sumNumber(num) {
-  return num + 5;
-}
-
-const secondSum = function (num) {
-  return num + 5;
+const list = {
+  stereo: 5,
+  tv: 25,
+  dvd: 2,
 };
 
-const funcExs = (num) => num + 5;
+const num = Object.keys(list).length;
+console.log(num);
+const val = Object.values(list);
+console.log(val);
+const entries = Object.entries(list);
+console.log(entries);
 
-console.log(funcExs(2, 6));
-// function calculateAverage() {
-//   console.log("arguments", arguments);
-//   const numbers = Array.from(arguments);
+// console.log(dog); // {name: 'Манго'}
+// console.log(dog.name); // 'Манго'
+// console.log(dog.legs); // 4
+
+// function countProps(object) {
+//   let propCount = 0;
+//   //   let arr = [];
+//   const arr = [];
+
+//   const keys = Object.keys(object);
+//   for (key of keys) {
+//     arr.push(key);
+//   }
+//   // arr - []
+//   // arr - ['mail', 'isOnline', 'score']
+//   console.log(arr);
+//   propCount = arr.length;
+//   console.log(arr.length);
+
+//   return propCount;
+// }
+
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+// Можем ли мы использовать this вместо hotel в этом примере из конспекта?
+const hotel = {
+  name: "Resort Hotel",
+  stars: 5,
+  capacity: 100,
+  //   showName() {
+  //     console.log(`this`, this);
+  //     // console.log(`name =`, this.name);
+  //   },
+
+  //     showName: function () {
+  //       // this = hotel
+  //         // clg
+  //     console.log(`this`, this);
+  //   },
+};
+
+// hotel.showName();
+
+// const keys = Object.keys(hotel);
+// const values = Object.values(hotel);
+// const entries = Object.entries(hotel); //[[name, 'Resort Hotel'], [stars, '5'], [capacity, 100]]
+// const obj = Object.fromEntries(entries);
+
+// console.log(`keys`, keys);
+// console.log(`values`, values);
+// console.log(`entries`, entries);
+// console.log(`obj`, obj);
+
+// const a = { x: 1, y: 2 };
+// const b = { x: 0, z: 3 };
+
+// const c = { x: 5, j: 10, ...a, z: 15, ...b };
+// // x :1 => x: 5 перезаписиваем на x: 1
+// // y : 2 => y : 2
+// // x: 0 => x : 1 переписиваем на x:0
+// // z: 3 => z: 15 переписиваем на z: 3
+
+// console.log(c); // {x: 0, j: 10, y: 2, z: 3}
+//можно уточнить, почему  в получившемся объекте, Х = 0, а не 5 ?
+
+// const newSettings = {
+//   theme: "Default",
+// };
+
+// const pinkSettings = {
+//   theme: "Pink",
+//   font: "Open",
+//   size: "15px",
+// };
+
+// const siteSettings = {
+//   theme: "Dark",
+//   font: "monospace",
+//   navbarPosition: "fixed",
+//   ...pinkSettings,
+// };
+
+// console.log(`settings`, siteSettings);
+
+// Optional Chaining ?.
+
+// const car = {
+//   speed: {
+//     value: 150,
+//     unit: "mph",
+//   },
+//   doors: 5,
+//   wheels: {
+//     value: 5,
+//     // size: {
+//     //   big: "Large",
+//     // },
+//   },
+// };
+// console.log(car.wheels.value);
+// console.log(car.wheels && car.wheels.value);
+
+// if (car.wheels) {
+//   console.log(car.wheels.value);
+// }
+
+// console.log(car.wheels?.size?.big);
+
+// car.wheels // undefined
+// undefined.value
+// console.log(car.speed?.value);
+// console.log(car.speed?.whatever);
+// console.log(car.speed?.whatever?.value);
+
+// 1)  Напиши скрипт, который, для объекта user, последовательно:
+
+// добавляет поле mood со значением 'happy'
+// заменяет значение hobby на 'skydiving'
+// заменяет значение premium на false
+// выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of
+
+// const user = {
+//   name: "Mango",
+//   age: 20,
+//   hobby: "html",
+//   premium: true,
+// };
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const keys = Object.keys(user);
+// console.log(`keys`, keys);
+
+// for (let key of keys) {
+//   // key = 'name'
+//   // key = 'age'
+//   console.log(`${key} : ${user[key]}`);
+// }
+
+// console.log(user);
+
+// 2) У нас есть объект, в котором хранятся зарплаты нашей команды.
+// Напишите код для суммирования всех зарплат и сохраните результат в переменной sum.
+// Должно получиться 390. Если объект salaries пуст, то результат должен быть 0.
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// const money = Object.values(salaries);
+// console.log(`money`, money);
+// let total = 0;
+
+// for (let element of money) {
+//   total += element;
+// }
+
+// console.log(`total`, total);
+
+// function calculateSalaries(salaries) {
+//   const money = Object.values(salaries);
+//   console.log(`money`, money);
 //   let total = 0;
-//   for (let number of numbers) {
-//     total += number;
+
+//   for (let element of money) {
+//     total += element;
 //   }
-//   return (total / numbers.length).toFixed(2);
+//   return total;
 // }
 
-// console.log(calculateAverage(1, 2, 3, 4)); // 2.5
-// console.log(calculateAverage(14, 8, 2)); // 8
-// console.log(calculateAverage(27, 43, 2, 8, 36)); // 23.2
+// console.log("result", calculateSalaries(salaries));
 
-// 2) Напишите функцию greet(name), которая при вызове будет получать имя(например, «Василий») и логировать строку «Привет, <имя>».
-// В случае отсутствующего аргумента выводить «Привет, гость»
+// 3) Напишите ф - цию calcTotalPrice(stones, stoneName), которая принимает массив обьектов и строку с названием камня.
+// Ф - ция считает и возвращает общую стоимость камней с таким именем, ценой и количеством из обьекта
 
-// const greet = function (name = "гость") {
-//   return `Привет ${name}`;
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 3 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 200, quantity: 2 },
+// ];
+
+// console.log(`result`, calcTotalPrice(stones, "Бриллиант")); // 8100
+
+// 4) Создайте объект calculator(калькулятор) с тремя методами:
+// read()- запрашивает два значения и сохраняет их как свойства объекта.
+// sum() - возвращает сумму сохранённых значений.
+// mult() - перемножает сохранённые значения и возвращает результат.
+
+// const calculator = {
+//   a: null,
+//   b: null,
+
+//   read() {
+//     this.a = prompt("Enter A value");
+//     this.b = prompt("Enter B value");
+//   },
+
+//   sum() {
+//     return Number(this.a) + Number(this.b);
+//   },
+
+//   mult() {
+//     return this.a * this.b;
+//   },
 // };
 
-// console.log(greet("Манго"));
-// console.log(greet());
+// console.log("before read", calculator);
+// calculator.read();
+// console.log("after read", calculator);
+// console.log(`sum`, calculator.sum());
+// console.log(`mult`, calculator.mult());
 
-// const greet = function (name = "гость") {
-//   console.log(`Привет ${name}`);
+// 5) Напиши скрипт управления личным кабинетом интернет банка.
+// Есть объект account в котором необходимо реализовать методы для работы с балансом и историей транзакций.
+
+/*
+ * Типов транзацкий всего два.
+ * Можно положить либо снять деньги со счета.
+ */
+// const Transaction = {
+//   DEPOSIT: "deposit",
+//   WITHDRAW: "withdraw",
 // };
 
-// greet("Манго");
-// greet();
+/*
+ * Каждая транзакция это объект со свойствами: id, type и amount
+ */
 
-// 3) Выполните рефакторинг заменив объявление функции на стрелочную функцию.
+// const account = {
+//   // Текущий баланс счета
+//   balance: 0,
 
-// function checkNumbers(a, b) {
-//   if (a > b) {
-//     return `число ${a} больше ${b}`;
-//   }
+//   // История транзакций
+//   transactions: [],
 
-//   return `число ${b} больше ${a}`;
-// }
+//   /*
+//    * Метод создает и возвращает объект транзакции.
+//    * Принимает сумму и тип транзакции.
+//    */
+//   createTransaction(amount, type) {
+//     return {
+//       id: this.transactions.length,
+//       amount,
+//       type,
+//     };
+//   },
 
-// const checkNumbers = function (a, b) {
-//   if (a > b) {
-//     return `число ${a} больше ${b}`;
-//   }
+//   /*
+//    * Метод отвечающий за добавление суммы к балансу.
+//    * Принимает сумму танзакции.
+//    * Вызывает createTransaction для создания объекта транзакции
+//    * после чего добавляет его в историю транзакций
+//    */
+//   deposit(amount) {},
 
-//   return `число ${b} больше ${a}`;
+//   /*
+//    * Метод отвечающий за снятие суммы с баланса.
+//    * Принимает сумму танзакции.
+//    * Вызывает createTransaction для создания объекта транзакции
+//    * после чего добавляет его в историю транзакций.
+//    *
+//    * Если amount больше чем текущий баланс, выводи сообщение
+//    * о том, что снятие такой суммы не возможно, недостаточно средств.
+//    */
+//   withdraw(amount) {},
+
+//   /*
+//    * Метод возвращает текущий баланс
+//    */
+//   getBalance() {},
+
+//   /*
+//    * Метод ищет и возвращает объект транзации по id
+//    */
+//   getTransactionDetails(id) {},
+
+//   /*
+//    * Метод возвращает количество средств
+//    * определенного типа транзакции из всей истории транзакций
+//    */
+//   getTransactionTotal(type) {},
 // };
 
-// const checkNumbers = (a, b) => {
-//   if (a > b) {
-//     return `число ${a} больше ${b}`;
-//   }
-
-//   return `число ${b} больше ${a}`;
-// };
-
-// const checkNumbers = (a, b) => {
-//   return a > b ? `число ${a} больше ${b}` : `число ${b} больше ${a}`;
-// };
-
-// const checkNumbers = (a, b) =>
-//   a > b ? `число ${a} больше ${b}` : `число ${b} больше ${a}`;
-
-// 5) Написать ф - ю capitalize которая буде принимать строку и будет возвращать новую где каждое слово будет с большой буквы
-// capitalize('the quick brown fox') // 'The Quick Brown Fox '
-
-// function capitalize(string) {
-//   const arrayFromString = string.split(" ");
-//   const newArray = [];
-
-//   for (let word of arrayFromString) {
-//     let firstLetter = word[0].toUpperCase();
-//     let restString = word.slice(1);
-//     let finalString = `${firstLetter}${restString}`;
-//     newArray.push(finalString);
-//   }
-//   return newArray.join(" ");
-// }
-
-// console.log(capitalize("the quick brown fox"));
-
-// function capitalize (string) {
-//     const arr = string.split(' ')
-//     const finalArray =[]
-//     for(let word of arr) {
-//         const firstLetter = word[0].toUpperCase()
-//         const restString = word.slice(1)
-//         const result = firstLetter + restString;
-//         finalArray.push(result)
-//     }
-//     const finalString = finalArray.join(' ')
-//     return finalString
-// }
-
-// 6) Напишите функции для работы с коллекцией обучающих курсов courses:
-
-// addCourse(name) - добавляет курс в конец коллекции
-// removeCourse(name) - удаляет курс из коллекции
-// updateCourse(oldName, newName)- изменяет имя на новое
-
-// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
-
-// function addCourse(course) {
-//   if (courses.includes(course)) {
-//     console.log("У вас уже есть такое курс");
-//     return;
-//   }
-//   courses.push(course);
-// }
-
-// const addCourse = (course) => {
-//   if (courses.includes(course)) {
-//     console.log("У вас уже есть такое курс");
-//     return;
-//   }
-//   courses.push(course);
-// };
-
-// const removeCourse = (course) => {
-//   const courseIndex = courses.indexOf(course);
-//   if (courseIndex === -1) {
-//     console.log("Курс с таким имененем не найден");
-//     return;
-//   }
-//   courses.splice(courseIndex, 1);
-// };
-
-// const updateCourse = (courseToDelete, courseToAdd) => {
-//   const index = courses.indexOf(courseToDelete);
-//   courses.splice(index, 1, courseToAdd);
-//   //   courses[index] = courseToAdd;
-//   //   removeCourse(courseToDelete);
-//   //   addCourse(courseToAdd);
-// };
-
-// addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
-// addCourse("CSS"); // 'У вас уже есть такое курс'
-// removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
-// removeCourse("Vue"); // 'Курс с таким имененем не найден'
-// updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
-
-// console.log(courses);
-
-// 7) Написать ф-ю которая принимает строку в rem и возвращает ответ в пикселях
-// toPX('2rem') //32px
-// toPX('1rem') //16px
-
-// 8) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
-// пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран
-
-// 9) Написать ф - ю конвертыции валют где мы передаем суму, валюту из которой переводим и валюту в которую переводим
-// Эта ф-я возвращает суму в той валюте в которуюу переводили
-// const usdToEur = 0.82;
-// const eurToUsd = 1.21;
-// const usdToBtc = 0.000026;
-// const btcToUsd = 38630.7;
-// const eurToBtc = 0.000031;
-// const btcToEur = 31864.3;
-
-// const USD = "USD";
-// const EUR = "EUR";
-// const BTC = "BTC";
-
-// function convert(sum, from, to) {}
+// console.log(`account`, account);
+// console.log("result", account.createTransaction(100, Transaction.DEPOSIT));
