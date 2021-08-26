@@ -1,3 +1,4 @@
+'use strict';
 // function foo(callback) {
 //   console.log(callback);
 //   callback(20, 5);
@@ -528,7 +529,7 @@ const allTags = tweets.reduce((acc, tweet) => {
   // console.log(acc);
   return [...acc, ...tweet.tags];
 }, []);
-console.log(allTags);
+// console.log(allTags);
 
 // acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
 // acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
@@ -553,13 +554,221 @@ console.log(allTags);
 //   return acc;
 // }, {});
 
-const tagsStats = allTags.reduce((acc, tag) => {
-  return {
-    ...acc,
-    [tag]: acc[tag] ? acc[tag] + 1 : 1,
-  };
-}, {});
-console.log(tagsStats);
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+// // console.log(tagsStats);
 
+// function showName() {
+//   console.log("this", this);
+// }
+// showName();
+
+// const petya = {
+//   username: "Petya",
+//   showName() {
+//     console.log("this", this);
+//   },
+// };
+
+// petya.showName();
+// const hotel = {
+//   username: "Resort hotel",
+//   showThis() {
+//     const foo = () => {
+//       // Стрелки запоминают контекст во время объявления,
+//       // из родительской области видимости
+//       console.log("this in foo: ", this);
+//     };
+
+//     foo();
+//     console.log("this in showThis: ", this);
+//   },
+// };
+
+// hotel.showThis();
+// const petya = {
+//   username: "Petya",
+//   showThis() {
+//     console.log(this);
+//   },
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+
+// petya.showThis(); // {name: "Petya", showThis: ƒ, showName: ƒ}
+// petya.showName();
+
+// function showThis() {
+//   console.log("this in showThis: ", this);
+// }
+
+// const showThis = () => {
+//   console.log("this in showThis: ", this);
+// };
+
+// showThis();
+
+
+// const user = {
+//   username: "Mango",
+  
+// };
+// user.showContext = showThis;
+// user.showContext();
+// console.log(user);
+// // hotel.foo();
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Манго";
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog));
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+
+//   // Метод getEmail
+//   getEmail() {
+//     console.log(this.email);
+//     return this.email;
+//   }
+
+//   // Метод changeEmail
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// console.log(User);
+// const mango = new User("Манго", "mango@mail.com");
+// console.log(mango);
+// mango.getEmail();
+//  // { name: 'Манго', email: 'mango@mail.com' }
+// const poly = new User("Поли", "poly@mail.com");
+// console.log(poly);
 // если свойство с ключом tag есть. увеличить его значение на 1
 // если свойствоства нет с таким ключом что в tag, сделать и записать 1
+// const hotel = {
+//   username: "Resort hotel",
+//   showThis() {
+//     const foo = () => {
+//       // Стрелки запоминают контекст во время объявления,
+//       // из родительской области видимости
+//       console.log("this in foo: ", this);
+//     };
+
+//     foo();
+//     console.log("this in showThis: ", this);
+//   },
+// };
+
+// hotel.showThis();
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Mercer",
+//   getFullName() {
+//     console.log(this);
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// console.log(customer.getFullName());
+
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback()}.`);
+// }
+
+// makeMessage(customer.getFullName);
+
+// function greet(clientName) {
+//   console.log(`${clientName}, добро пожаловать в «${this.service}».`);
+//   return `${clientName}, добро пожаловать в «${this.service}».`;
+// }
+
+// const steam = {
+//   service: "Steam",
+// };
+// console.log(steam);
+// const steamGreeter = greet.bind(steam);
+// console.log(steam);
+// steamGreeter("Манго"); // "Манго, добро пожаловать в «Steam»."
+
+// const gmail = {
+//   service: "Gmail",
+// };
+// const gmailGreeter = greet.bind(gmail);
+// const testGreeter = greet.call(gmail, "hello");
+// // gmailGreeter("Поли");
+// console.log(gmailGreeter);
+// console.log(testGreeter);
+// gmailGreeter("Serega");
+// class User {
+//   constructor(name,email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+
+//   getEmail() {
+//     // return this.email;
+//   }
+
+//   setEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// // console.log(User);
+// // const mango = new User("mango");
+// // console.log(mango);
+// // mango.setEmail('jshad@ksjf.jhf');
+// // console.log(mango);
+// // class ContentEditor extends User {
+// //   // Тело класса ContentEditor
+// }
+
+// const editor = new ContentEditor("mango@mail.com");
+// console.log(editor); // { email: "mango@mail.com" }
+// console.log(editor.email); // "mango@mail.com"
+// console.log(ContentEditor === User);
+
+// const someObj = {};
+// console.log(someObj);
+// const arr = [];
+// console.log(arr);
+
+const customer = {
+  firstName: "Jacob",
+  lastName: "Mercer",
+  getFullName() {
+    console.log(this);
+    console.log(this.firstName);
+    // return `${this.firstName} ${this.lastName}`;
+  },
+};
+// console.log(customer.getFullName());
+function makeMessage(callback) {
+  // callback() это вызов метода getFullName без объекта
+  console.log(`Обрабатываем заявку от ${callback()}.`);
+}
+customer.getFullName();
+makeMessage(customer.getFullName.bind(customer)); 
+
+
+
+// let user = {
+//   firstName: "Вася"
+// };
+
+// function func() {
+//   alert(this.firstName);
+// }
+
+// let funcUser = func.bind(user);
+// funcUser(); // Вася
