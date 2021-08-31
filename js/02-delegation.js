@@ -10,13 +10,13 @@ const addBtn = document.querySelector(".js-add-btn");
 container.addEventListener("click", buttonHeandler);
 
 function buttonHeandler(e) {
-  if(e.target.nodeName === "BUTTON") {
+  if (e.target.nodeName === "BUTTON") {
     console.log("click", e.target.outerText);
   }
 }
 let countBtn = 6;
 function addButtonHeandler(e) {
-  const btn = document.createElement('button');
+  const btn = document.createElement("button");
   btn.textContent = `Кнопка ${countBtn}`;
   // const markup = `<button type="button">Кнопка ${countBtn}</button>`
   // container.append(btn);
